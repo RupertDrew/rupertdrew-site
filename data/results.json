@@ -1,0 +1,31 @@
+{
+  "heading": "Real people, real changes.",
+  "intro": "No crash diets and no six week miracles. Just people who turned up, did the work, and stuck with it.",
+  "items": [
+    {
+      "name": "Rod S",
+      "detail": "12 kg down in three months",
+      "quote": "Training with Rupert changed my life. I was physically active in my twenties, but since entering my mid-forties, I became concerned about the health impacts of being overweight and under-energised. Three months after beginning my fitness journey with Rupert, I lost over 12 kg and my body fat percentage decreased by 18%. I became stronger and more physically confident. He's not only exceedingly knowledgeable in his field; he's also conscientious in his coaching and diligent in his follow-up. Like a trustworthy Sherpa, he'll guide you to the top!",
+      "photo": "img/results/rod.jpg"
+    },
+    {
+      "name": "Peter C",
+      "detail": "",
+      "quote": "The biggest difference was the continued support and check-ins. Every week or so we'd check in, review what I'd been doing, and Rupert would feed that back to me and make any necessary adjustments. That might be changing weights in the programme, changing my diet slightly, or changing parts of my workout. That continued support and dialogue really helped me stay focused and achieve my goals. I'd describe his coaching as fun, supportive and enthusiastic.",
+      "photo": "img/results/peter.jpg"
+    },
+    {
+      "name": "Arthur D",
+      "detail": "",
+      "quote": "",
+      "photo": "img/results/arthur.jpg"
+    },
+    {
+      "name": "Paul C",
+      "detail": "",
+      "quote": "",
+      "photo": "img/results/paul.jpg"
+    }
+  ],
+  "quotesOnly": []
+}
