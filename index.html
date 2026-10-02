@@ -475,6 +475,7 @@
       <div class="sec-label">My story</div>
       <h2 style="font-size:clamp(29px,3.8vw,44px)">I didn't come to this from a background in sport.</h2>
 
+      <div id="story-prose">
       <p class="first" style="margin-top:30px">
         Back in the day I wanted to work in music. I partied too much, felt depressed and aimless,
         and didn't have much of a clue what I was doing with myself.
@@ -503,6 +504,7 @@
         Outside of coaching you'll usually find me doing Olympic lifting or jiu jitsu, badly at first
         and then slightly less badly. I think that's rather the point.
       </p>
+      </div>
     </div>
   </div>
 </section>
@@ -702,5 +704,166 @@
     });
 })();
 </script>
+<script>
+/* ---------------------------------------------------------------
+   Content renderer.
+   Everything a client is likely to want to change lives in
+   data/content.json. This fills the page in from that file.
+   If the file is missing or broken, the page keeps the wording
+   that is already baked into the HTML, so it never goes blank.
+   In any text field, *words between asterisks* come out highlighted.
+---------------------------------------------------------------- */
+(function () {
+  var SRC = 'data/content.json';
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+  function hl(s) {
+    return esc(s).replace(/\*([^*]+)\*/g, '<span class="yel">$1</span>');
+  }
+  function el(sel, root) { return (root || document).querySelector(sel); }
+  function setText(sel, val) { var n = el(sel); if (n && val != null) n.textContent = val; }
+  function setHTML(sel, val) { var n = el(sel); if (n && val != null) n.innerHTML = hl(val); }
+  function setAttr(sel, attr, val) { var n = el(sel); if (n && val != null) n.setAttribute(attr, val); }
+
+  function render(c) {
+    if (!c || typeof c !== 'object') return;
+
+    if (c.hero) {
+      var h = c.hero;
+      setText('.hero .eyebrow', h.eyebrow);
+      setHTML('.hero h1', h.title);
+      setText('.hero .lede', h.lede);
+      setText('.hero-note', h.note);
+      var btns = document.querySelectorAll('.hero-cta .btn');
+      if (btns[0] && h.primaryLabel) btns[0].textContent = h.primaryLabel;
+      if (btns[1] && h.secondaryLabel) btns[1].textContent = h.secondaryLabel;
+      setAttr('.portrait img', 'src', h.photo);
+      setAttr('.portrait img', 'alt', h.photoAlt);
+    }
+
+    if (Array.isArray(c.strip) && c.strip.length) {
+      var strip = el('.strip-inner');
+      if (strip) {
+        var one = c.strip.map(function (s) {
+          return '<span><i>/</i>' + esc(s) + '</span>';
+        }).join('');
+        strip.innerHTML = one + one;
+      }
+    }
+
+    if (c.who) {
+      setText('#who .sec-label', c.who.label);
+      setText('#who h2', c.who.heading);
+      setText('#who .sec-intro', c.who.intro);
+      var wl = el('.who-list');
+      if (wl && Array.isArray(c.who.items)) {
+        wl.innerHTML = c.who.items.map(function (it, i) {
+          return '<div class="who-item rv in">' +
+                 '<div class="n">' + ('0' + (i + 1)).slice(-2) + '</div>' +
+                 '<h3>' + esc(it.title) + '</h3>' +
+                 '<p>' + esc(it.body) + '</p></div>';
+        }).join('');
+      }
+    }
+
+    if (c.approach) {
+      setText('#approach .sec-label', c.approach.label);
+      setText('#approach h2', c.approach.heading);
+      var fl = el('.flow');
+      if (fl && Array.isArray(c.approach.items)) {
+        fl.innerHTML = c.approach.items.map(function (it) {
+          return '<div class="row rv in">' +
+                 '<div class="k">' + hl(it.claim).replace(/<span class="yel">/g, '<em>').replace(/<\/span>/g, '</em>') + '</div>' +
+                 '<p class="v">' + esc(it.body) + '</p></div>';
+        }).join('');
+      }
+    }
+
+    if (c.story) {
+      setText('#story .sec-label', c.story.label);
+      setText('#story h2', c.story.heading);
+      setAttr('.story-photo img', 'src', c.story.photo);
+      setAttr('.story-photo img', 'alt', c.story.photoAlt);
+      var sp = el('#story-prose');
+      if (sp) {
+        var out = '';
+        (c.story.paragraphs || []).forEach(function (p, i) {
+          out += '<p' + (i === 0 ? ' class="first" style="margin-top:30px"' : '') + '>' + esc(p) + '</p>';
+        });
+        if (c.story.pullQuote) out += '<div class="pull">' + esc(c.story.pullQuote) + '</div>';
+        if (c.story.closing) out += '<p>' + esc(c.story.closing) + '</p>';
+        if (out) sp.innerHTML = out;
+      }
+    }
+
+    if (c.quote) {
+      setHTML('.quote p', c.quote.text);
+      setText('.quote .who', c.quote.name);
+      setText('.quote .meta', c.quote.source);
+    }
+
+    if (c.work) {
+      setText('#work .sec-label', c.work.label);
+      setText('#work h2', c.work.heading);
+      var st = el('.steps');
+      if (st && Array.isArray(c.work.items)) {
+        st.innerHTML = c.work.items.map(function (it) {
+          return '<div class="step rv in">' +
+                 '<div class="n">' + esc(it.step) + '</div>' +
+                 '<h3>' + esc(it.title) + '</h3>' +
+                 '<p>' + esc(it.body) + '</p></div>';
+        }).join('');
+      }
+    }
+
+    if (c.contact) {
+      var ct = c.contact;
+      setText('#contact .sec-label', ct.label);
+      setText('#contact h2', ct.heading);
+      setText('.contact-lede', ct.lede);
+
+      var ig = ct.instagram ? String(ct.instagram).replace(/^@/, '') : null;
+      var igUrl = ig ? 'https://www.instagram.com/' + ig + '/' : null;
+
+      document.querySelectorAll('a[href*="instagram.com"]').forEach(function (a) {
+        if (igUrl) a.setAttribute('href', igUrl);
+        if (ig && /^@/.test(a.textContent.trim())) a.textContent = '@' + ig;
+      });
+      document.querySelectorAll('a[href^="mailto:"]').forEach(function (a) {
+        if (!ct.email) return;
+        a.setAttribute('href', 'mailto:' + ct.email);
+        if (a.textContent.indexOf('@') > -1) a.textContent = ct.email;
+      });
+
+      var cms = document.querySelectorAll('.contact-meta .cm');
+      cms.forEach(function (cm) {
+        var k = el('.k', cm), v = el('.v', cm);
+        if (!k || !v) return;
+        var key = k.textContent.trim().toLowerCase();
+        if (key === 'where' && ct.addressLine1) {
+          v.innerHTML = esc(ct.addressLine1) + '<br>' + esc(ct.addressLine2 || '');
+        } else if (key === 'training at' && ct.gym) {
+          v.textContent = ct.gym;
+        }
+      });
+
+      var dmeta = el('.dmeta');
+      if (dmeta && ct.addressLine1) {
+        dmeta.innerHTML = esc(ct.addressLine1) + ', ' + esc(ct.addressLine2 || '') + '<br>@' + esc(ig || '');
+      }
+    }
+  }
+
+  fetch(SRC, { cache: 'no-cache' })
+    .then(function (r) { if (!r.ok) throw new Error('no content file'); return r.json(); })
+    .then(render)
+    .catch(function () { /* keep the wording already in the HTML */ });
+})();
+</script>
+
 </body>
 </html>

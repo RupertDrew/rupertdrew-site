@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "eyebrow": "Personal Training · London Bridge",
+    "title": "Strength that *lasts* longer than the programme.",
+    "lede": "I help people move well, get genuinely stronger and feel better in their body, whatever shape they're starting from.",
+    "primaryLabel": "Book a chat",
+    "secondaryLabel": "How I coach",
+    "note": "One to one coaching at a private gym on Druid Street, SE1.",
+    "photo": "img/rupert.jpg",
+    "photoAlt": "Rupert Drew, personal trainer in London Bridge"
+  },
+  "strip": [
+    "Strength",
+    "Movement",
+    "Confidence",
+    "Training around injury",
+    "Getting back into it",
+    "Feeling better"
+  ],
+  "who": {
+    "label": "Who I work with",
+    "heading": "All ages, all starting points, no judgement.",
+    "intro": "I coach people in their twenties and people in their sixties. Some have trained for years, plenty haven't set foot in a gym in a decade. Nobody has to arrive fit.",
+    "items": [
+      {
+        "title": "You're starting again",
+        "body": "Or starting properly for the first time. Gyms can be intimidating places. That wears off faster than you'd think when someone shows you what to do."
+      },
+      {
+        "title": "Something always tweaks",
+        "body": "You build a bit of momentum, pick up a niggle, and lose six weeks. We can train around most things rather than waiting for them to be perfect."
+      },
+      {
+        "title": "You want the reasoning",
+        "body": "Being told to just do it doesn't work for you. You want to understand why, so you can back the plan yourself."
+      }
+    ]
+  },
+  "approach": {
+    "label": "The approach",
+    "heading": "What I actually believe about training.",
+    "items": [
+      {
+        "claim": "Your body *adapts*. It isn't a machine that breaks.",
+        "body": "Technique matters, but it's only part of the picture. How much you're doing, what you're used to, and how fast you've added load all matter too. Being adaptable beats being perfect."
+      },
+      {
+        "claim": "Progress is more than *the numbers going up*.",
+        "body": "Cleaner, more controlled reps are progress too. You don't get stronger because you lift heavier. You lift heavier because you've got stronger."
+      },
+      {
+        "claim": "You don't have to *earn the right* to train.",
+        "body": "You don't need to pass a mobility exam before you're allowed to get strong. We start from where you actually are."
+      },
+      {
+        "claim": "The real question is: *what do you want out of it?*",
+        "body": "Not whether something is theoretically optimal. What outcome do you want, and what's the sensible route there for the life you've actually got."
+      },
+      {
+        "claim": "It was never really about *ripped abs*.",
+        "body": "It's about breaking limits you'd quietly set for yourself and getting a better quality of life out of it."
+      }
+    ]
+  },
+  "story": {
+    "label": "My story",
+    "heading": "I didn't come to this from a background in sport.",
+    "photo": "img/rupert-coaching.jpeg",
+    "photoAlt": "Rupert Drew coaching a client through a squat in his London Bridge gym",
+    "paragraphs": [
+      "Back in the day I wanted to work in music. I partied too much, felt depressed and aimless, and didn't have much of a clue what I was doing with myself.",
+      "Then I got into martial arts. It was a humbling experience, and it taught me about grit, work ethic and self belief. Those were the first things in my life that felt properly mine.",
+      "Encouraged by my big brother, I qualified as a personal trainer to help other people find the same thing. I knew almost nothing back then. After three years I moved to a body transformation studio in London, got seriously lean, and helped a lot of clients do the same.",
+      "I wanted to be a better coach than that, because I'd worked out it isn't just about ripped abs. So I invested in myself: courses, mentorships, coaching from some of the best people in the industry. I still have coaches now. I'd rather keep learning than tell you this is how it's always been done."
+    ],
+    "pullQuote": "My goal is to help you figure this fitness stuff out, so that one day you don't need me.",
+    "closing": "Outside of coaching you'll usually find me doing Olympic lifting or jiu jitsu, badly at first and then slightly less badly. I think that's rather the point."
+  },
+  "quote": {
+    "text": "I'd always had this image of personal trainers as aggressive, shouty types who bark orders at you. He couldn't be further from that. He worked *with* me rather than at me.",
+    "name": "Sam L.",
+    "source": "Google review"
+  },
+  "work": {
+    "label": "How it works",
+    "heading": "Simple, and no pressure at any point.",
+    "items": [
+      {
+        "step": "STEP ONE",
+        "title": "We have a chat",
+        "body": "What you want, what's gone wrong before, and what your week actually looks like. No sales pitch. If I'm not the right fit, I'll say so."
+      },
+      {
+        "step": "STEP TWO",
+        "title": "We train together",
+        "body": "One to one sessions at the gym on Druid Street, with a programme built around your body, your schedule and your goal."
+      },
+      {
+        "step": "STEP THREE",
+        "title": "You take it over",
+        "body": "Over time you learn the reasoning, not just the reps, until you can run your own training with confidence."
+      }
+    ]
+  },
+  "contact": {
+    "label": "Get in touch",
+    "heading": "Fancy a conversation about it?",
+    "lede": "Send me a message and tell me roughly where you're at. No commitment and no hard sell, just a straight conversation about whether I can help.",
+    "instagram": "rupertdrewpt",
+    "email": "rupertdrew@hotmail.co.uk",
+    "addressLine1": "26 Druid St",
+    "addressLine2": "London SE1 2EY",
+    "gym": "GymNation, London Bridge"
+  }
+}

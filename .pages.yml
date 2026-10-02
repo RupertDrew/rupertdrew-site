@@ -1,0 +1,221 @@
+media:
+  input: img
+  output: img
+
+content:
+  - name: testimonials
+    label: Testimonials
+    type: file
+    path: data/results.json
+    fields:
+      - name: heading
+        label: Section heading
+        type: string
+      - name: intro
+        label: Intro line
+        type: text
+      - name: items
+        label: Testimonials
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Their name
+            type: string
+            description: First name and initial is fine, e.g. Rod S
+          - name: detail
+            label: Short result
+            type: string
+            description: e.g. 12 kg down in three months
+          - name: quote
+            label: What they said
+            type: text
+          - name: photo
+            label: Photo
+            type: image
+
+  - name: homepage
+    label: Website wording
+    type: file
+    path: data/content.json
+    fields:
+      - name: hero
+        label: Top of the page
+        type: object
+        fields:
+          - name: eyebrow
+            label: Small line above the headline
+            type: string
+          - name: title
+            label: Headline
+            type: string
+            description: "Put *asterisks* around any words you want highlighted in yellow"
+          - name: lede
+            label: Opening paragraph
+            type: text
+          - name: primaryLabel
+            label: Main button text
+            type: string
+          - name: secondaryLabel
+            label: Second button text
+            type: string
+          - name: note
+            label: Small note under the buttons
+            type: string
+          - name: photo
+            label: Your photo
+            type: image
+          - name: photoAlt
+            label: Photo description
+            type: string
+            description: Describes the photo for people using screen readers
+
+      - name: strip
+        label: Scrolling word strip
+        type: string
+        list: true
+
+      - name: who
+        label: Who I work with
+        type: object
+        fields:
+          - name: label
+            label: Section label
+            type: string
+          - name: heading
+            label: Heading
+            type: string
+          - name: intro
+            label: Intro paragraph
+            type: text
+          - name: items
+            label: Points
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: Title
+                type: string
+              - name: body
+                label: Text
+                type: text
+
+      - name: approach
+        label: The approach
+        type: object
+        fields:
+          - name: label
+            label: Section label
+            type: string
+          - name: heading
+            label: Heading
+            type: string
+          - name: items
+            label: Beliefs
+            type: object
+            list: true
+            fields:
+              - name: claim
+                label: The belief
+                type: string
+                description: "Put *asterisks* around words you want emphasised"
+              - name: body
+                label: Explanation
+                type: text
+
+      - name: story
+        label: My story
+        type: object
+        fields:
+          - name: label
+            label: Section label
+            type: string
+          - name: heading
+            label: Heading
+            type: string
+          - name: photo
+            label: Photo
+            type: image
+          - name: photoAlt
+            label: Photo description
+            type: string
+          - name: paragraphs
+            label: Paragraphs
+            type: text
+            list: true
+          - name: pullQuote
+            label: Highlighted quote
+            type: text
+          - name: closing
+            label: Closing paragraph
+            type: text
+
+      - name: quote
+        label: Featured review
+        type: object
+        fields:
+          - name: text
+            label: The review
+            type: text
+            description: "Put *asterisks* around words you want highlighted"
+          - name: name
+            label: Who said it
+            type: string
+          - name: source
+            label: Where it came from
+            type: string
+
+      - name: work
+        label: How it works
+        type: object
+        fields:
+          - name: label
+            label: Section label
+            type: string
+          - name: heading
+            label: Heading
+            type: string
+          - name: items
+            label: Steps
+            type: object
+            list: true
+            fields:
+              - name: step
+                label: Step label
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: body
+                label: Text
+                type: text
+
+      - name: contact
+        label: Contact details
+        type: object
+        fields:
+          - name: label
+            label: Section label
+            type: string
+          - name: heading
+            label: Heading
+            type: string
+          - name: lede
+            label: Intro paragraph
+            type: text
+          - name: instagram
+            label: Instagram handle
+            type: string
+            description: Without the @
+          - name: email
+            label: Email address
+            type: string
+          - name: addressLine1
+            label: Address line 1
+            type: string
+          - name: addressLine2
+            label: Address line 2
+            type: string
+          - name: gym
+            label: Gym name
+            type: string
