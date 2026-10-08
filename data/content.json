@@ -86,22 +86,22 @@
   },
   "work": {
     "label": "How it works",
-    "heading": "Simple, and no pressure at any point.",
+    "heading": "Simple, progressive and built around you.",
     "items": [
       {
-        "step": "STEP ONE",
+        "step": "STEP ONE: Clarity",
         "title": "We have a chat",
-        "body": "What you want, what's gone wrong before, and what your week actually looks like. No sales pitch. If I'm not the right fit, I'll say so."
+        "body": "We work out what you want, what’s been getting in the way and what your body and schedule can handle right now."
       },
       {
-        "step": "STEP TWO",
-        "title": "We train together",
-        "body": "One to one sessions at the gym on Druid Street, with a programme built around your body, your schedule and your goal."
+        "step": "STEP TWO: Build proof",
+        "title": "We train ",
+        "body": "You start seeing evidence that the plan works. You move better, get stronger, build fitness and gain confidence in what your body can do."
       },
       {
-        "step": "STEP THREE",
-        "title": "You take it over",
-        "body": "Over time you learn the reasoning, not just the reps, until you can run your own training with confidence."
+        "step": "STEP THREE: Build capacity",
+        "title": "We push",
+        "body": "Once the foundations are solid, we expand from there. More strength, more fitness, more variety and more freedom to pursue bigger goals."
       }
     ]
   },
