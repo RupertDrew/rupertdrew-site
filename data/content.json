@@ -42,23 +42,23 @@
     "items": [
       {
         "claim": "Your body *adapts*. It isn't a machine that breaks.",
-        "body": "Technique matters, but it's only part of the picture. How much you're doing, what you're used to, and how fast you've added load all matter too. Being adaptable beats being perfect."
+        "body": "Technique matters, but it’s only part of the picture. Load, volume, training history and how quickly you progress all matter too. The goal isn’t perfect movement. It’s building a body that can adapt."
       },
       {
         "claim": "Progress is more than *the numbers going up*.",
-        "body": "Cleaner, more controlled reps are progress too. You don't get stronger because you lift heavier. You lift heavier because you've got stronger."
+        "body": "Better technique, more control, more confidence and more capacity all count as progress. Adding weight matters, but only when you can actually own what you’re doing."
       },
       {
         "claim": "You don't have to *earn the right* to train.",
-        "body": "You don't need to pass a mobility exam before you're allowed to get strong. We start from where you actually are."
+        "body": "You don’t need to be fitter, more mobile or pain-free before you start. We begin where you are, teach you how to train well and build your capacity from there."
       },
       {
         "claim": "The real question is: *what do you want out of it?*",
-        "body": "Not whether something is theoretically optimal. What outcome do you want, and what's the sensible route there for the life you've actually got."
+        "body": "The goal isn’t to chase what looks optimal on paper. It’s to work out what you want, what your life can support, and the smartest route between the two."
       },
       {
         "claim": "It was never really about *ripped abs*.",
-        "body": "It's about breaking limits you'd quietly set for yourself and getting a better quality of life out of it."
+        "body": "It’s about feeling stronger, fitter and more capable in your body, and getting more out of your life because of it."
       }
     ]
   },
@@ -68,13 +68,16 @@
     "photo": "img/rupert-coaching.jpeg",
     "photoAlt": "Rupert Drew coaching a client through a squat in his London Bridge gym",
     "paragraphs": [
-      "Back in the day I wanted to work in music. I partied too much, felt depressed and aimless, and didn't have much of a clue what I was doing with myself.",
-      "Then I got into martial arts. It was a humbling experience, and it taught me about grit, work ethic and self belief. Those were the first things in my life that felt properly mine.",
-      "Encouraged by my big brother, I qualified as a personal trainer to help other people find the same thing. I knew almost nothing back then. After three years I moved to a body transformation studio in London, got seriously lean, and helped a lot of clients do the same.",
-      "I wanted to be a better coach than that, because I'd worked out it isn't just about ripped abs. So I invested in myself: courses, mentorships, coaching from some of the best people in the industry. I still have coaches now. I'd rather keep learning than tell you this is how it's always been done."
+      "Back in the day I wanted to work in music. I partied too much, felt pretty aimless and had no real idea what I was doing with myself.",
+      "Then I found martial arts.",
+      "Encouraged by my big brother, I qualified as a personal trainer to help other people find the same thing. I knew almost nothing back then. ",
+      "A few years later I moved to a body transformation studio in London. I learned a lot about fat loss, muscle gain and getting people results, but I also realised fitness had to be about more than getting lean.",
+      "So I kept learning. Courses, mentorships, coaching and years of working directly with people taught me how much good coaching depends on understanding the person in front of you.",
+      "How they move. What their life looks like. What keeps getting in the way. What they actually want from training.",
+      "That’s still how I coach now."
     ],
-    "pullQuote": "My goal is to help you figure this fitness stuff out, so that one day you don't need me.",
-    "closing": "Outside of coaching you'll usually find me doing Olympic lifting or jiu jitsu, badly at first and then slightly less badly. I think that's rather the point."
+    "pullQuote": "My goal is to help you understand your body, train with confidence and build something you can eventually manage without me.",
+    "closing": "Outside of coaching, you’ll usually find me Olympic lifting or doing jiu-jitsu, still learning, still getting things wrong and gradually getting better."
   },
   "quote": {
     "text": "I'd always had this image of personal trainers as aggressive, shouty types who bark orders at you. He couldn't be further from that. He worked *with* me rather than at me.",
